@@ -1,0 +1,19 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - debug:
+      msg: '{{ 42 | mynamespace.tscoll.myfilters.afilter }}'
+  - debug:
+      msg: '{{ "fromuser" is mynamespace.tscoll.mytests.atest }}'
+  - testmodule:
+  - mynamespace.tscoll.testaction:
+  - mynamespace.tscoll.testmodule:
+  - testmodule:
+
+- hosts: win
+  gather_facts: no
+  tasks:
+  - mynamespace.tscoll.win_ping:
+  - win_ping:
+
+

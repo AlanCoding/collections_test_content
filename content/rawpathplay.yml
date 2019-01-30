@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: no
+  tasks:
+  - a.mynamespace.mycollection.testmodule:
+  - a.mynamespace.mycollection.testaction:
+#  - testmodule:
+#  - testaction:
+
